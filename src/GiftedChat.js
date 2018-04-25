@@ -355,6 +355,8 @@ class GiftedChat extends React.Component {
   resetInputToolbar() {
     if (this.textInput) {
       this.textInput.clear();
+      this.textInput.setNativeProps({ keyboardType: 'email-address' });
+      this.textInput.setNativeProps({ keyboardType: 'default' });
     }
     this.notifyInputTextReset();
     const newComposerHeight = MIN_COMPOSER_HEIGHT;
